@@ -16,3 +16,7 @@ macx {
     CONFIG -= app_bundle
     QMAKE_CXXFLAGS += -Wno-format-nonliteral -Wno-format -Wno-format-security
 }
+
+linux {
+    QMAKE_CXXFLAGS += -Wno-format-nonliteral -Wno-format -Wno-format-security
+}

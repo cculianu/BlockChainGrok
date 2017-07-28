@@ -24,7 +24,7 @@ public:
     template <typename ...T>
     Log(const char *fmt,T&&...args) {
         setString(&str, QIODevice::WriteOnly);
-        QString s = QString::asprintf(fmt,std::forward<T>(args)...);
+        QString s = QString().sprintf(fmt,std::forward<T>(args)...);
         (*this) << s;
     }
     virtual ~Log() { finishPrt(); }
